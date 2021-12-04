@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Yuji+Syuku&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #29292c;
+}
+h2{
+    position: relative;
+    font-size: 14vw;
+    color: #29292c;
+    -webkit-text-stroke: 0.01vw #3c5c3c;
+    text-transform: uppercase;
+}
+h2::before{
+content:attr(data-text);
+position: absolute;
+top:0;
+left: 0;
+width: 0%;
+height: 100%;
+color:#53dd53;
+-webkit-text-stroke:0vh #3c5c3c;
+border-right: 2px solid #53dd53;
+overflow: hidden;
+animation: animate 6s linear infinite;
+}
+@keyframes animate {
+    0%,10%,100%{
+        width: 0%;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
